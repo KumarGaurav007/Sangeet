@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useMusicStore } from "@/stores/useMusicStore";
 import { usePlayerStore } from "@/stores/usePlayerStore";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { Clock, Pause, Play } from "lucide-react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom"
 
-const formatDuration = (seconds: number) => {
+export const formatDuration = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
@@ -42,7 +42,7 @@ const AlbumPage = () => {
     };
 
     return (
-        <div className="h-full mx-2 my-2 ">
+        <div className="h-full ml-2 my-2 ">
             <ScrollArea className="h-full rounded-md">
                 <div className='relative min-h-full'>
 
