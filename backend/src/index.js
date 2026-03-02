@@ -7,7 +7,7 @@ import cors from "cors";
 import fs from "fs";
 import { createServer } from "http";
 
-
+import { initializeSocket } from "./lib/socket.js";
 import { connectDB } from "./lib/db.js";
 import userRoutes from "./routes/user.route.js";
 import adminRoutes from "./routes/admin.route.js";
@@ -23,6 +23,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 const httpServer = createServer(app);
+initializeSocket(httpServer);
 
 app.use(
 	cors({
