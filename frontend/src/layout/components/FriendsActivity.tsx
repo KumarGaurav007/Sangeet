@@ -83,7 +83,7 @@ const LoginPrompt = () => (
     <div className='h-full flex flex-col items-center justify-center p-6 text-center space-y-4'>
         <div className='relative'>
             <div
-                className='absolute -inset-1 bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full blur-lg
+                className='absolute -inset-1 bg-linear-to-r from-emerald-500 to-sky-500 rounded-full blur-lg
                 opacity-75 animate-pulse'
                 aria-hidden='true'
             />
