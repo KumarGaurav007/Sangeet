@@ -10,5 +10,5 @@ const albumSchema = new mongoose.Schema(
 	},
 	{ timestamps: true }
 ); //  createdAt, updatedAt
-
+albumSchema.index({ title: "text", artist: "text" });
 export const Album = mongoose.model("Album", albumSchema);
